@@ -2,26 +2,20 @@ import java.util.*;
 
 public class Sortedset {
     public static void main(String[] args) {
-        TreeSet<Integer> sset = new TreeSet<>();
 
-        // Insertion
-        sset.add(30);
-        sset.add(10);
-        sset.add(20);
+        SortedSet<Integer> s = new TreeSet<>();
 
-        // Updation
-        sset.remove(20);
-        sset.add(25);
+        s.add(20);
+        s.add(10);
 
-        // Searching
-        System.out.println(sset.contains(25));
+        s.remove(10);
+        s.add(15);
 
-        // Deletion
-        sset.remove(10);
+        System.out.println(s.contains(15));
 
-        // Traversal
-        for (int x : sset) {
+        s.remove(20);
+
+        for (int x : s)
             System.out.println(x);
-        }
     }
 }

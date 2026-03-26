@@ -1,26 +1,27 @@
-import java.util.*;
-
+import java.util.SortedMap;
+import java.util.TreeMap;
+import java.util.Map;
 public class Sortedmap {
     public static void main(String[] args) {
-        TreeMap<Integer, String> smap = new TreeMap<>();
 
-        // Insertion
-        smap.put(3, "C");
-        smap.put(1, "A");
-        smap.put(2, "B");
+        SortedMap<Integer, String> m = new TreeMap<>();
 
-        // Updation
-        smap.put(2, "Z");
+        // Insert
+        m.put(2, "B");
+        m.put(1, "A");
 
-        // Searching
-        System.out.println(smap.get(1));
+        // Update
+        m.put(2, "Z");
 
-        // Deletion
-        smap.remove(3);
+        // Search
+        System.out.println(m.get(1));
 
-        // Traversal
-        for (java.util.Map.Entry<Integer, String> e : smap.entrySet()) {
-            System.out.println(e.getKey() + " " + e.getValue());
+        // Delete
+        m.remove(2);
+
+        // Traversal (sorted order)
+        for (Map.Entry<Integer, String> e : m.entrySet()) {
+            System.out.println(e);
         }
     }
 }
